@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: noice;
+  src: url(/frontend/src/Fonts/material-regular.ttf);
+}
