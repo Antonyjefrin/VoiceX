@@ -1,3 +1,4 @@
+import sys
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import cv2
@@ -5,8 +6,15 @@ import os
 import numpy as np
 import easyocr 
 
+sys.path.append(os.path.join(os.path.dirname(__file__), 'MySql'))
+from auth import auth_bp  
+
+
 app = Flask(__name__)
 CORS(app)
+
+app.register_blueprint(auth_bp)
+
 
 # ✅ Initialize EasyOCR reader
 reader = easyocr.Reader(['en'])  # Specify language (English)

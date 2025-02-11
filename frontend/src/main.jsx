@@ -19,6 +19,7 @@ const Router = createBrowserRouter(
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
       <Route path='/profile' element={<Profile/>}/>
+      <Route path='/uploadFlowchart' element={<UploadCharts/>}/>
 
 
 
